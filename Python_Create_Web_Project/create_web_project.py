@@ -124,8 +124,15 @@ try:
 
         os.makedirs(project_folder_name + assets_folder)
 
-        os.startfile(project_folder_name) # windows only
-        webbrowser.open(project_folder_name)
+
+        if os.name == "posix":
+            webbrowser.open(project_folder_name)
+        elif os.name == "nt":
+            os.startfile(project_folder_name) # windows only
+        else:
+            print("Cannot open in file explorer or finder")
+        # os.startfile(project_folder_name) # windows only
+        # webbrowser.open(project_folder_name)
 
         # print("DIRECTORY WITH SUB DIRECTORIES AND FILES CREATED SUCCESSFULLY")
     else:
