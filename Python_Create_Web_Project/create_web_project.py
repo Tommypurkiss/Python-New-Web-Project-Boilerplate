@@ -6,7 +6,7 @@ print("Enter your project folder name")
 # TODO check mac or windows desktop?
 
 if os.name == "posix":
-    project_folder_name = "/Users/tommypurkiss/Desktop/Projects" + "/" + input()
+    project_folder_name = "/Users/tommypurkiss/Desktop" + "/" + input()
 elif os.name == "nt":
     project_folder_name = "C:/Users/Tommy/Desktop" + "/" + input()
 else:
